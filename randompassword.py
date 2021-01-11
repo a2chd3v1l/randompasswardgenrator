@@ -1,7 +1,7 @@
 def passward() :
     import random
     n = int(input("Length of passward is : "))
-    word = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%"
+    word = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%({)}<>:;~[]/|"
     i = 0
     end = "" 
     while i < n :
