@@ -1,7 +1,11 @@
+import random
+from string import ascii_letters, digits, punctuation
+
+
+n = int(input("Length of passward is : "))
+word = ascii_letters + digits + punctuation
+
 def passward() :
-    import random
-    n = int(input("Length of passward is : "))
-    word = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%({)}<>:;~[]/|"
     i = 0
     end = "" 
     while i < n :
@@ -12,4 +16,3 @@ def passward() :
 
 if __name__ == "__main__":
     passward()
-        
