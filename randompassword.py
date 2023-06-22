@@ -1,18 +1,20 @@
+#! /usr/bin/env python
 import random
+import argparse
 from string import ascii_letters, digits, punctuation
 
 
-n = int(input("Length of passward is : "))
-word = ascii_letters + digits + punctuation
+parser = argparse.ArgumentParser(description="Generate a random password of length n . ")
+parser.add_argument("-l", "--length",dest="length", help="Length of password")
+args = parser.parse_args()
 
-def passward() :
-    i = 0
-    end = "" 
-    while i < n :
-       passw = random.choice(word)
-       end+= passw
-       i += 1
-    print(f'Your password is : {end}')   
+words = ascii_letters + digits + punctuation
+def passward(words,n=8) :
+    passwd = "".join(random.sample(words,n))
+    print(f'Your password is : {passwd}')
 
 if __name__ == "__main__":
-    passward()
+    if args.length:
+        passward(words,n=int(args.length))
+    else:
+        passward(words)
